@@ -38,26 +38,26 @@ flow:
         command: python /app/conformance_check.py fitness_alignments
         note: Running fitness alignments
   - name: precision_token
-      container: precision_token_container
-      commands:
-        - type: console
-          command: python /app/conformance_check.py precision_token
-          note: Running precision token based replay
+    container: precision_token_container
+    commands:
+      - type: console
+        command: python /app/conformance_check.py precision_token
+        note: Running precision token based replay
   - name: conformance_log_skeleton
-      container: conformance_log_skeleton_container
-      commands:
-        - type: console
-          command: python /app/conformance_check.py conformance_log_skeleton
-          note: Running conformance log skeleton
+    container: conformance_log_skeleton_container
+    commands:
+      - type: console
+        command: python /app/conformance_check.py conformance_log_skeleton
+        note: Running conformance log skeleton
   - name: conformance_declare
-      container: conformance_declare_container
-      commands:
-        - type: console
-          command: python /app/conformance_check.py conformance_declare
-          note: Running conformance declare
+    container: conformance_declare_container
+    commands:
+      - type: console
+        command: python /app/conformance_check.py conformance_declare
+        note: Running conformance declare
   - name: conformance_temporal_profile
-      container: conformance_temporal_profile_container
-      commands:
-        - type: console
-          command: python /app/conformance_check.py conformance_temporal_profile
-          note: Running conformance temporal profile
+    container: conformance_temporal_profile_container
+    commands:
+      - type: console
+        command: python /app/conformance_check.py conformance_temporal_profile
+        note: Running conformance temporal profile
