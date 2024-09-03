@@ -1,0 +1,63 @@
+---
+name: conformance-check
+author: Raines
+version: 1
+description: test conformance check algorithms
+
+services:
+  fitness_token_container:
+    build:
+      context: .
+  fitness_alignments_container:
+    build:
+      context: .
+  precision_token_container:
+    build:
+      context: .
+  conformance_log_skeleton_container:
+    build:
+      context: .
+  conformance_declare_container:
+    build:
+      context: .
+  conformance_temporal_profile_container:
+    build:
+      context: .
+
+flow:
+  - name: fitness_token
+    container: fitness_token_container
+    commands:
+      - type: console
+        command: python /app/conformance_check.py fitness_token
+        note: Running fitness token based replay
+  - name: fitness_alignments
+    container: fitness_alignments_container
+    commands:
+      - type: console
+        command: python /app/conformance_check.py fitness_alignments
+        note: Running fitness alignments
+  - name: precision_token
+      container: precision_token_container
+      commands:
+        - type: console
+          command: python /app/conformance_check.py precision_token
+          note: Running precision token based replay
+  - name: conformance_log_skeleton
+      container: conformance_log_skeleton_container
+      commands:
+        - type: console
+          command: python /app/conformance_check.py conformance_log_skeleton
+          note: Running conformance log skeleton
+  - name: conformance_declare
+      container: conformance_declare_container
+      commands:
+        - type: console
+          command: python /app/conformance_check.py conformance_declare
+          note: Running conformance declare
+  - name: conformance_temporal_profile
+      container: conformance_temporal_profile_container
+      commands:
+        - type: console
+          command: python /app/conformance_check.py conformance_temporal_profile
+          note: Running conformance temporal profile
