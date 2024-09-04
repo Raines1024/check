@@ -8,9 +8,6 @@ services:
   fitness_token_container:
     build:
       context: .
-  fitness_alignments_container:
-    build:
-      context: .
   precision_token_container:
     build:
       context: .
@@ -31,12 +28,6 @@ flow:
       - type: console
         command: python /app/conformance_check.py fitness_token
         note: Running fitness token based replay
-  - name: fitness_alignments
-    container: fitness_alignments_container
-    commands:
-      - type: console
-        command: python /app/conformance_check.py fitness_alignments
-        note: Running fitness alignments
   - name: precision_token
     container: precision_token_container
     commands:

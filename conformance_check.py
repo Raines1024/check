@@ -56,44 +56,6 @@ if __name__ == "__main__":
                                                            case_id_key='case:concept:name',
                                                            timestamp_key='time:timestamp')
 
-        elif param == "fitness_alignments":
-            # 使用对齐计算适应度
-            net_1, im_1, fm_1 = pm4py.discover_petri_net_inductive(BPIC13_i, activity_key='concept:name',
-                                                                   case_id_key='case:concept:name',
-                                                                   timestamp_key='time:timestamp')
-            fitness_alignments = pm4py.fitness_alignments(BPIC13_i, net_1, im_1, fm_1, activity_key='concept:name',
-                                                           case_id_key='case:concept:name',
-                                                           timestamp_key='time:timestamp')
-            net_2, im_2, fm_2 = pm4py.discover_petri_net_inductive(BPIC13_cp, activity_key='concept:name',
-                                                                   case_id_key='case:concept:name',
-                                                                   timestamp_key='time:timestamp')
-            fitness_alignments = pm4py.fitness_alignments(BPIC13_cp, net_2, im_2, fm_2, activity_key='concept:name',
-                                                           case_id_key='case:concept:name',
-                                                           timestamp_key='time:timestamp')
-            net_3, im_3, fm_3 = pm4py.discover_petri_net_inductive(BPIC15_1f, activity_key='concept:name',
-                                                                   case_id_key='case:concept:name',
-                                                                   timestamp_key='time:timestamp')
-            fitness_alignments = pm4py.fitness_alignments(BPIC15_1f, net_3, im_3, fm_3, activity_key='concept:name',
-                                                           case_id_key='case:concept:name',
-                                                           timestamp_key='time:timestamp')
-            net_4, im_4, fm_4 = pm4py.discover_petri_net_inductive(BPIC15_2f, activity_key='concept:name',
-                                                                   case_id_key='case:concept:name',
-                                                                   timestamp_key='time:timestamp')
-            fitness_alignments = pm4py.fitness_alignments(BPIC15_2f, net_4, im_4, fm_4, activity_key='concept:name',
-                                                           case_id_key='case:concept:name',
-                                                           timestamp_key='time:timestamp')
-            net_5, im_5, fm_5 = pm4py.discover_petri_net_inductive(BPIC15_4f, activity_key='concept:name',
-                                                                   case_id_key='case:concept:name',
-                                                                   timestamp_key='time:timestamp')
-            fitness_alignments = pm4py.fitness_alignments(BPIC15_4f, net_5, im_5, fm_5, activity_key='concept:name',
-                                                           case_id_key='case:concept:name',
-                                                           timestamp_key='time:timestamp')
-            net_6, im_6, fm_6 = pm4py.discover_petri_net_inductive(BPIC15_5f, activity_key='concept:name',
-                                                                   case_id_key='case:concept:name',
-                                                                   timestamp_key='time:timestamp')
-            fitness_alignments = pm4py.fitness_alignments(BPIC15_5f, net_6, im_6, fm_6, activity_key='concept:name',
-                                                           case_id_key='case:concept:name',
-                                                           timestamp_key='time:timestamp')
         elif param == "precision_token":
             # 使用基于令牌的重放计算精度
             net_1, im_1, fm_1 = pm4py.discover_petri_net_inductive(BPIC13_i, activity_key='concept:name',
